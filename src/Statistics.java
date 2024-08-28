@@ -39,8 +39,7 @@ public class Statistics {
     }
 
     public int getNumbersOfGoals(String goalscorer) {
-        // Her skal vi så kalde metoden i Main med Målscorerens navn som input.
-        // Så returner den målscorerens antal mål i alt
-        return goalScorersWithTotal.get(goalscorer);
+        Map<String, Integer> scorerWithTotals = getGoalScorersWithTotals();
+        return scorerWithTotals.get(goalscorer);
     }
 }

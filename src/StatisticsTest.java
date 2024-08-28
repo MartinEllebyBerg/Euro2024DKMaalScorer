@@ -54,4 +54,19 @@ public class StatisticsTest {
         //Assert
         Assertions.assertEquals(goalScorersTotalTestActual,goalScorersTotalTestExpected);
     }
+
+    @Test
+    public void getNumberOfGoals() throws FileNotFoundException {
+        //Arrange
+        Statistics statistics = new Statistics("src/Euro2024QualifyingRound.csv");
+        String goalScorer = "Højlund";
+
+        //Act
+        int expectedValue = 7;
+        int actualValue = statistics.getNumbersOfGoals(goalScorer);
+
+        //Assert
+        Assertions.assertEquals(expectedValue, actualValue);
+    }
+
 }
